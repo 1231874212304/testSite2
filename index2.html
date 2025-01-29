@@ -26,6 +26,13 @@
 </head>
 <body>
     <iframe src="logowanie.html"></iframe>
-    
+    <!-- Rejestracja Service Workera -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('assets/sw.js')
+                .then(registration => console.log('Service Worker zarejestrowany:', registration))
+                .catch(error => console.error('Błąd rejestracji Service Workera:', error));
+        }
+    </script>
 </body>
 </html>
